@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вы попались</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      animation: backgroundAnimation 10s ease infinite;
+      color: white;
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background: linear-gradient(to right, #ff7e5f, #feb47b); }
+      50% { background: linear-gradient(to right, #86a8e7, #91eae4); }
+      100% { background: linear-gradient(to right, #ff7e5f, #feb47b); }
+    }
+
+    .message {
+      text-align: center;
+      font-size: 40px; /* Увеличенный шрифт */
+      font-weight: bold; /* Жирный шрифт */
+      color: red; /* Красный цвет текста */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      cursor: pointer;
+      color: #ffeb3b;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ffc107;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="message" id="message">
+  Вы попались! <br>
+  <a onclick="changeText()">Перейти дальше</a>
+</div>
+<div class="message hidden" id="finalMessage">
+  Вы снова попались! <br>
+  <a onclick="closeMessage()">Закрыть</a>
+</div>
+<div class="message hidden" id="closeMessage">
+  Ну сколько уже можно попадаться!
+</div>
+
+<script>
+  function changeText() {
+    document.getElementById('message').classList.add('hidden');
+    document.getElementById('finalMessage').classList.remove('hidden');
+  }
+
+  function closeMessage() {
+    document.getElementById('finalMessage').classList.add('hidden');
+    document.getElementById('closeMessage').classList.remove('hidden');
+  }
+</script>
+</body>
+</html>
