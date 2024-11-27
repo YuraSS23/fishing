@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вы попались</title>
+  <title>Вы попались!</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,28 +12,31 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      background: linear-gradient(to right, #a8c0ff, #3f2b96); /* Более мягкий градиент */
       animation: backgroundAnimation 10s ease infinite;
-      color: white;
     }
 
     @keyframes backgroundAnimation {
-      0% { background: linear-gradient(to right, #ff7e5f, #feb47b); }
-      50% { background: linear-gradient(to right, #86a8e7, #91eae4); }
-      100% { background: linear-gradient(to right, #ff7e5f, #feb47b); }
+      0% { background: linear-gradient(to right, #a8c0ff, #3f2b96); }
+      50% { background: linear-gradient(to right, #f0f2f0, #000c40); }
+      100% { background: linear-gradient(to right, #a8c0ff, #3f2b96); }
     }
 
     .message {
       text-align: center;
-      font-size: 40px; /* Увеличенный шрифт */
+      font-size: 30px; /* Увеличенный шрифт */
       font-weight: bold; /* Жирный шрифт */
       color: red; /* Красный цвет текста */
-      padding: 20px;
+      padding: 40px; /* Увеличенные отступы */
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       opacity: 0;
       transform: translateY(-20px);
       animation: fadeIn 0.5s forwards;
+      width: 900px; /* Увеличенная ширина */
+      height: auto; /* Автоматическая высота */
+      min-height: 200px; /* Минимальная высота */
+      background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для текста */
     }
 
     @keyframes fadeIn {
@@ -45,13 +48,13 @@
 
     a {
       cursor: pointer;
-      color: #ffeb3b;
+      color: #2980b9; /* Цвет ссылок */
       text-decoration: underline;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #ffc107;
+      color: #3498db; /* Цвет ссылок при наведении */
     }
 
     .hidden {
@@ -62,14 +65,17 @@
 <body>
 <div class="message" id="message">
   Вы попались! <br>
+  Вы перешли по фишинговой ссылке. Поздравляем! Мошенники могли получить доступ к вашим данным: посещаемые сайты, сохранённые пароли и даже данные банковских карт. <br>
   <a onclick="changeText()">Перейти дальше</a>
 </div>
 <div class="message hidden" id="finalMessage">
-  Вы снова попались! <br>
+  Ещё один клик — и вы откроете двери мошенникам! <br>
+  Они могут установить на ваше устройство хитроумное вредоносное ПО, получая доступ к вашим данным и управления вашей системой. Будьте внимательны, чтобы не стать жертвой их уловок! <br>
   <a onclick="closeMessage()">Закрыть</a>
 </div>
 <div class="message hidden" id="closeMessage">
-  Ну сколько уже можно попадаться!
+  Вот и всё! <br>
+  Вы сами открыли двери мошенникам, предоставив им доступ к вашему компьютеру, телефону и всем вашим личным данным. Не дайте им шанса! Защитите себя и свои устройства от их коварных уловок!
 </div>
 
 <script>
