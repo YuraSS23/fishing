@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: linear-gradient(to right, #a8c0ff, #3f2b96); /* Более мягкий градиент */
+      background: linear-gradient(to right, #a8c0ff, #3f2b96);
       animation: backgroundAnimation 10s ease infinite;
     }
 
@@ -24,18 +24,18 @@
 
     .message {
       text-align: center;
-      font-size: 30px; /* Увеличенный шрифт */
-      font-weight: bold; /* Жирный шрифт */
-      padding: 40px; /* Увеличенные отступы */
+      font-size: 30px;
+      font-weight: bold;
+      padding: 40px;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       opacity: 0;
       transform: translateY(-20px);
       animation: fadeIn 0.5s forwards;
-      width: 900px; /* Увеличенная ширина */
-      height: auto; /* Автоматическая высота */
-      min-height: 200px; /* Минимальная высота */
-      background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для текста */
+      width: 900px;
+      height: auto;
+      min-height: 200px;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     @keyframes fadeIn {
@@ -46,22 +46,22 @@
     }
 
     .red-text {
-      color: red; /* Красный цвет для первой строки */
+      color: red;
     }
 
     .black-text {
-      color: black; /* Черный цвет для остального текста */
+      color: black;
     }
 
     a {
       cursor: pointer;
-      color: #2980b9; /* Цвет ссылок */
+      color: #2980b9;
       text-decoration: underline;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #3498db; /* Цвет ссылок при наведении */
+      color: #3498db;
     }
 
     .hidden {
@@ -71,20 +71,21 @@
 </head>
 <body>
 <div class="message" id="message">
-  <div class="red-text">Вы открыли вредоносный файл!</div> <!-- Первая строка красная -->
+  <div class="red-text">Вы открыли вредоносный файл!</div>
   <div class="black-text">Мошенники могли получить доступ к вашим данным: посещаемые сайты, сохранённые пароли и даже данные банковских карт.</div>
   <br>
   <a onclick="changeText()">Закрыть</a>
 </div>
 <div class="message hidden" id="finalMessage">
-  <div class="red-text">Ещё один клик — и вы откроете двери мошенникам!</div> <!-- Первая строка красная -->
+  <div class="red-text">Ещё один клик — и вы откроете двери мошенникам!</div>
   <div class="black-text">Вы перешли по фишинговой ссылке. Они могут установить на ваше устройство хитроумное вредоносное ПО, получая доступ к вашим данным и управления вашей системой. Будьте внимательны, чтобы не стать жертвой их уловок!</div>
   <br>
   <a onclick="closeMessage()">Закрыть</a>
 </div>
 <div class="message hidden" id="closeMessage">
-  <div class="red-text">Вот и всё! Вредоносное ПО уже установлено!</div> <!-- Первая строка красная -->
-  <div class="black-text">Вы сами открыли доступ мошенникам к вашему компьютеру, телефону и личным данным. Будьте внимательны и осторожны! Используйте антивирусное программное обеспечение, проверяйте ссылки перед переходом и никогда не открывайте подозрительные файлы!</div>
+  <div class="red-text">Вот и всё! Вредоносное ПО уже установлено!</div>
+  <div class="black-text">Вы сами открыли доступ мошенникам к вашему компьютеру, телефону и личным данным. Будьте внимательны и осторожны!<br>
+  Совет: используйте антивирусное программное обеспечение, проверяйте ссылки перед переходом и никогда не открывайте подозрительные файлы!</div>
 </div>
 
 <script>
